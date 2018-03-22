@@ -11,7 +11,7 @@ namespace Adventure_Game
             playerName = Console.ReadLine();
 
             if (playerName == "Mark")
-                Console.WriteLine("Welcome, ButtFace");
+                Console.WriteLine("Welcome, Super nice person!");
             else
                 Console.WriteLine("Welcome " + playerName);
             new HF().squareEntered();
