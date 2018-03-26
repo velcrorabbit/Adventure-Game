@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adventure_Game.Errors;
+using System;
 
 namespace Adventure_Game
 {
@@ -8,7 +9,7 @@ namespace Adventure_Game
         {
             Console.WriteLine("You fall into a dark empty void, you notice a sign in the sky 'New map! Coming soon to an adventure near you'.");
             Console.WriteLine("");
-            new HF().squareEntered();
+            new EndGame().restart();
         }
         }
 }

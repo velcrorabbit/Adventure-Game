@@ -1,13 +1,12 @@
-﻿using Adventure_Game.GridLocations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Adventure_Game
+namespace Adventure_Game.GridLocations
 {
-    class EE
+    public class DE
     {
         public void squareEntered()
         {
@@ -15,18 +14,24 @@ namespace Adventure_Game
             newDirection();
         }
 
-        private void newDirection()
+        public void newDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
             if (DirectionsHelper.isEast(direction))
-                new FE().squareEntered();
+                new EE().squareEntered();
             else if (DirectionsHelper.isNorth(direction))
-                new PitDeath().squareEntered();
+                new DF().squareEntered();
             else if (DirectionsHelper.isWest(direction))
-                new DE().squareEntered();
+            {
+                Console.WriteLine("You bump into the cave wall");
+                newDirection();
+            }
             else if (DirectionsHelper.isSouth(direction))
-                Console.WriteLine("You bump into the cave wall.");
+            {
+                Console.WriteLine("You bump into the cave wall");
+                newDirection();
+            }
             else
             {
                 new Error().displayErrorMessage();

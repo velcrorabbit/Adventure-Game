@@ -32,13 +32,13 @@ namespace Adventure_Game
             Console.WriteLine("Choose a direction");
             string direction = Console.ReadLine();
 
-            if (direction == "east")
+            if (DirectionsHelper.isEast(direction))
                 new IF().squareEntered();
-            else if (direction == "north")
+            else if (DirectionsHelper.isNorth(direction))
                 new HG().squareEntered();
-            else if (direction == "west")
+            else if (DirectionsHelper.isWest(direction))
                 new GF().squareEntered();
-            else if (direction == "south")
+            else if (DirectionsHelper.isSouth(direction))
                 new HE().squareEntered();
             else
             {

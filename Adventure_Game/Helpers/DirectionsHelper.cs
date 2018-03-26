@@ -29,6 +29,14 @@
             return false;
 
         }
+        public static bool isNorth(string direction)
+        {
+            if (direction.ToLower().Equals("north") || direction.ToLower().Equals("n"))
+            {
+                return true;
+            }
+            return false;
 
+        }
     }
 }

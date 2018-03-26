@@ -16,19 +16,19 @@ namespace Adventure_Game
 
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
-            if (direction == "east")
+            if (DirectionsHelper.isEast(direction))
             {
                 Console.WriteLine("IE");
                 new Incomplete().displayIncompleteMessage();
             }
-            else if (direction == "north")
+            else if (DirectionsHelper.isNorth(direction))
                 new HF().squareEntered();
-            else if (direction == "south")
+            else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("HD");
                 new Incomplete().displayIncompleteMessage();
             }
-            else if (direction == "west")
+            else if (DirectionsHelper.isWest(direction))
                 new GE().squareEntered();
             else
                 new Error().displayErrorMessage();

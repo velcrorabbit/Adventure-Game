@@ -20,7 +20,7 @@ namespace Adventure_Game
                 string direction = Console.ReadLine();
                 if (DirectionsHelper.isEast(direction)) 
                     new GE().squareEntered();
-                else if (direction == "north")
+                else if (DirectionsHelper.isNorth(direction))
                     new FF().squareEntered();
                 else if (DirectionsHelper.isSouth(direction))
                 {

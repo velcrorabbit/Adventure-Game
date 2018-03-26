@@ -4,21 +4,17 @@ namespace Adventure_Game
 {
     internal class GE
     {
-        internal void squareEntered()
+        public void squareEntered()
         {
             Console.WriteLine("The forest continues. Choose a direction");
             string direction = Console.ReadLine();
-
-            if (direction == "east")
+            if (DirectionsHelper.isEast(direction))
                 new HE().squareEntered();
-            else if (direction == "north")
-            {
-                Console.WriteLine("GF");
-                new Incomplete().displayIncompleteMessage();
-            }
-            else if (direction == "west")
+            else if (DirectionsHelper.isNorth(direction))
+                new GF().squareEntered();
+            else if (DirectionsHelper.isWest(direction))
                 new FE().squareEntered();
-            else if (direction == "south")
+            else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("GD");
                 new Incomplete().displayIncompleteMessage();

@@ -9,16 +9,16 @@ namespace Adventure_Game
             Console.WriteLine("There is a cliff, below you is the sea, to the north you can hear a waterfall.");
             string direction = Console.ReadLine();
 
-            if (direction == "east")
+            if (DirectionsHelper.isEast(direction))
                 new CliffDeath().squareEnterered();
-            else if (direction == "north")
+            else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("IG");
                 new Incomplete().displayIncompleteMessage();
             }
-            else if (direction == "west")
+            else if (DirectionsHelper.isWest(direction))
                 new HF().squareEntered();
-            else if (direction == "south")
+            else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("IE");
                 new Incomplete().displayIncompleteMessage();
