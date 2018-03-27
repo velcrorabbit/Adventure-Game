@@ -7,14 +7,20 @@ namespace Adventure_Game
     {
         public void squareEntered()
         {
-            Console.WriteLine("A large river flows infront of you, it looks very deep.");
+            Console.WriteLine("A large river flows in front of you, it looks very deep.");
+            NewDirection();
+        }
+
+        internal void NewDirection()
+        {
             Console.WriteLine("Where do you want to go?");
             string direction = Console.ReadLine().ToLower();
 
             if (DirectionsHelper.isEast(direction))
             {
                 Console.WriteLine("IG");
-                new Incomplete().displayIncompleteMessage();
+                new Incomplete().displayIncompleteMessageWithoutExit();
+                NewDirection();
             }
             else if (DirectionsHelper.isNorth(direction))
                 new RiverDeath().squareEntered();

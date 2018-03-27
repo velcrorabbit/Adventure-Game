@@ -20,7 +20,7 @@ namespace Adventure_Game
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
             if (DirectionsHelper.isEast(direction))
-                new FE().squareEntered();
+                new FE().SquareEntered();
             else if (DirectionsHelper.isNorth(direction))
                 new PitDeath().squareEntered();
             else if (DirectionsHelper.isWest(direction))

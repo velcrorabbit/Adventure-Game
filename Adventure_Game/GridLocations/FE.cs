@@ -4,7 +4,7 @@ namespace Adventure_Game
 {
     internal class FE
     {
-        internal void squareEntered()
+        internal void SquareEntered()
         {
             Console.WriteLine("Infront of you is the entrance to a dark cave, do you want to go in? y/n");
             string input = Console.ReadLine();
@@ -17,6 +17,13 @@ namespace Adventure_Game
             else if (input == "n")
             {
                 Console.WriteLine("You decide to turn back. Choose a direction.");
+                NewDirection();
+            }
+            else
+                new Error().displayErrorMessage();
+        }
+        internal void NewDirection()
+        {
                 string direction = Console.ReadLine();
                 if (DirectionsHelper.isEast(direction)) 
                     new GE().squareEntered();
@@ -25,13 +32,9 @@ namespace Adventure_Game
                 else if (DirectionsHelper.isSouth(direction))
                 {
                     Console.WriteLine("FD");
-                    new Incomplete().displayIncompleteMessage();
+                    new Incomplete().displayIncompleteMessageWithoutExit();
+                    NewDirection();
                 }
-                else
-                    new Error().displayErrorMessage();
-            }
-            else
-                new Error().displayErrorMessage();
         }
     }
 }

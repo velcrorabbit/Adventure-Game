@@ -1,4 +1,4 @@
-﻿using Adventure_Game.Errors;
+﻿using Adventure_Game;
 using System;
 
 namespace Adventure_Game
@@ -11,5 +11,11 @@ namespace Adventure_Game
             Console.WriteLine("");
             new EndGame().restart();
         }
+
+        public void displayIncompleteMessageWithoutExit()
+        {
+            Console.WriteLine("You hit an invisable wall, a sign above reads: 'New map! Coming soon to an adventure near you'.");
+
         }
+    }
 }

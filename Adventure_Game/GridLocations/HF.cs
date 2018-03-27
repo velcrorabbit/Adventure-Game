@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adventure_Game.GridLocations;
+using System;
 
 namespace Adventure_Game
 {
@@ -6,6 +7,10 @@ namespace Adventure_Game
     {
         public void squareEntered()
         {
+            var inventory = new Inventory();
+
+            inventory.HasBook = true;
+            
             Console.WriteLine("You are in a forest, trees stretch in every direction.");
             Console.WriteLine("There is a large oak tree in front of you, do you want to climb? y/n");
             string input = Console.ReadLine();
@@ -23,11 +28,12 @@ namespace Adventure_Game
                 Console.WriteLine("Your mother always warned you of the dangers of trees, you decide to continue on blindly.");
             }
 
-            newDirection();
+            newDirection(inventory);
             
         }
 
-        private void newDirection()
+
+        private void newDirection(Inventory inventory)
         {
             Console.WriteLine("Choose a direction");
             string direction = Console.ReadLine();
@@ -43,7 +49,7 @@ namespace Adventure_Game
             else
             {
                 new Error().displayErrorMessage();
-                newDirection();
+                newDirection(inventory);
             }
         }
     }

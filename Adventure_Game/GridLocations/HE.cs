@@ -1,4 +1,5 @@
 ﻿using System;
+using Adventure_Game.GridLocations;
 
 namespace Adventure_Game
 {
@@ -12,27 +13,34 @@ namespace Adventure_Game
             if (input == "y")
                 new House().squareEnterered();
             else if (input == "n")
+            {
                 Console.WriteLine("Good choice, probably a trap anyway.");
+                NewDirection();
+            }
+        }
 
+        private static void NewDirection()
+        {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
             if (DirectionsHelper.isEast(direction))
             {
                 Console.WriteLine("IE");
-                new Incomplete().displayIncompleteMessage();
+                new Incomplete().displayIncompleteMessageWithoutExit();
+                NewDirection();
             }
             else if (DirectionsHelper.isNorth(direction))
                 new HF().squareEntered();
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("HD");
-                new Incomplete().displayIncompleteMessage();
+                new Incomplete().displayIncompleteMessageWithoutExit();
+                NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
                 new GE().squareEntered();
             else
                 new Error().displayErrorMessage();
-
         }
     }
 }

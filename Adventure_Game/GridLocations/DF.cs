@@ -17,12 +17,12 @@ namespace Adventure_Game.GridLocations
             if (input == "y")
                 hasPassword();
             if (input == "n")
-                noPassword();
+                NoPassword();
             else
                 new Error().displayErrorMessage();
         }
 
-        private void newDirection()
+        private void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
@@ -37,7 +37,7 @@ namespace Adventure_Game.GridLocations
             else
             {
                 new Error().displayErrorMessage();
-                newDirection();
+                NewDirection();
             }
         }
         private void hasPassword()
@@ -45,23 +45,23 @@ namespace Adventure_Game.GridLocations
             Console.WriteLine("The fairly looks doubltfull. Please say the password.");
             string password = Console.ReadLine();
             if (password == "ADEBLEC")
-                winner();
+                Winner();
             else
-                noPassword();
+                NoPassword();
 
         }
-        public void noPassword()
+        public void NoPassword()
         {
             Console.WriteLine("The fairy looks angry. 'Theif! Leave my cave at once and don't come back until you have the passowrd!'");
         }
-        public void winner()
+        public void Winner()
         {
             Console.WriteLine("The fairy jumps off the chest as it springs open revealing a pile of glowing treasure.");
             Console.WriteLine("Congraduations! You've found the treasure and won the game!");
             Console.WriteLine("Would you like to keep playing? y/n");
             string input = Console.ReadLine();
             if (input == "y")
-                newDirection();
+                NewDirection();
             else if (input == "n")
             {
                 Console.WriteLine("That's enough adventuring for one day.");

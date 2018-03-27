@@ -1,4 +1,5 @@
 ﻿using System;
+using Adventure_Game.GridLocations;
 
 namespace Adventure_Game
 {
@@ -9,6 +10,11 @@ namespace Adventure_Game
             Console.WriteLine("The trees continue, you see a crudely painted wooden sign nailed to one, it reads: ");
             Console.WriteLine("LARGE ANGRY BEAR, DO NOT CONTINUE");
             Console.WriteLine("Where do you want to go?");
+            NewDirection();
+        }
+
+         internal void NewDirection()
+        {
             string direction = Console.ReadLine().ToLower();
 
             if (DirectionsHelper.isEast(direction))
@@ -16,7 +22,8 @@ namespace Adventure_Game
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("GG");
-                new Incomplete().displayIncompleteMessage();
+                new Incomplete().displayIncompleteMessageWithoutExit();
+                NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
                 new FF().squareEntered();

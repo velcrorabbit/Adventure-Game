@@ -1,4 +1,5 @@
 ﻿using System;
+using Adventure_Game.GridLocations;
 
 namespace Adventure_Game
 {
@@ -7,6 +8,12 @@ namespace Adventure_Game
         public void squareEntered()
         {
             Console.WriteLine("There is a cliff, below you is the sea, to the north you can hear a waterfall.");
+            NewDirection();
+        }
+
+        internal void NewDirection()
+        {
+            Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
@@ -14,14 +21,16 @@ namespace Adventure_Game
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("IG");
-                new Incomplete().displayIncompleteMessage();
+                new Incomplete().displayIncompleteMessageWithoutExit();
+                NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
                 new HF().squareEntered();
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("IE");
-                new Incomplete().displayIncompleteMessage();
+                new Incomplete().displayIncompleteMessageWithoutExit();
+                NewDirection();
             }
             else
                 new Error().displayErrorMessage();
