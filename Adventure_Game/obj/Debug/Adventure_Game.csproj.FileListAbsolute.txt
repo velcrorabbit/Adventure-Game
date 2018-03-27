@@ -5,3 +5,7 @@ C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\obj\Debug\Adventure_Ga
 C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\obj\Debug\Adventure_Game.exe
 C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\obj\Debug\Adventure_Game.pdb
 C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\obj\Debug\Adventure_Game.csprojResolveAssemblyReference.cache
+C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\bin\Debug\Adventure_Game.exe.manifest
+C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\bin\Debug\Adventure_Game.application
+C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\obj\Debug\Adventure_Game.exe.manifest
+C:\Users\rache\source\repos\Adventure_Game\Adventure_Game\obj\Debug\Adventure_Game.application
