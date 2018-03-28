@@ -15,7 +15,6 @@ namespace Adventure_Game
         public void displayIncompleteMessageWithoutExit()
         {
             Console.WriteLine("You hit an invisable wall, a sign above reads: 'New map! Coming soon to an adventure near you'.");
-
         }
     }
 }

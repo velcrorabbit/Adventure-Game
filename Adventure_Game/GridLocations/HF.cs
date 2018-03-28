@@ -24,9 +24,7 @@ namespace Adventure_Game
                 Console.WriteLine("you climb down feeling more confident in where you want to go.");
             }
             if (input == "n")
-            {
                 Console.WriteLine("Your mother always warned you of the dangers of trees, you decide to continue on blindly.");
-            }
 
             newDirection(inventory);
             

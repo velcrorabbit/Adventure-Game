@@ -13,7 +13,10 @@ namespace Adventure_Game
             Console.WriteLine("Would you like to keep playing? y/n");
             string input = Console.ReadLine();
             if (input == "y")
+            {
+                Console.Clear();
                 new HF().squareEntered();
+            }
             else if (input == "n")
             {
                 Console.WriteLine("That's enough adventuring for one day.");

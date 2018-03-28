@@ -15,7 +15,7 @@ namespace Adventure_Game
             else if (playerName == "Rachel")
                 Console.WriteLine("Welcome oh glorious creator!");
             else
-                Console.WriteLine("Welcome " + playerName);
+                Console.WriteLine("Welcome, {0}" , playerName);
             new HF().squareEntered();
         }
     }
