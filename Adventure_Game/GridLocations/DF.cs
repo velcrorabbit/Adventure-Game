@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adventure_Game.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,14 @@ namespace Adventure_Game.GridLocations
 {
     class DF
     {
-        public void squareEntered()
+        private PlayerInfo LocalPlayerInfo;
+        public DF(PlayerInfo playerInfo)
+        {
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public DF() { squareEntered(); }
+        private void squareEntered()
         {
             Console.WriteLine("A large chest stands in front of you, there is a bored looking fairy sitting on it.");
             Console.WriteLine("She turns to you, 'Please tell me you have the password' she says.");
@@ -27,13 +35,13 @@ namespace Adventure_Game.GridLocations
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
             if (DirectionsHelper.isEast(direction))
-                new PitDeath().squareEntered();
+                new PitDeath();
             else if (DirectionsHelper.isNorth(direction))
                 Console.WriteLine("You bump into the cave wall");
             else if (DirectionsHelper.isWest(direction))
                 Console.WriteLine("You bump into the cave wall");
             else if (DirectionsHelper.isSouth(direction))
-                new DE().squareEntered();
+                new DE();
             else
             {
                 new Error().displayErrorMessage();
@@ -50,25 +58,15 @@ namespace Adventure_Game.GridLocations
                 NoPassword();
 
         }
-        public void NoPassword()
+        private void NoPassword()
         {
             Console.WriteLine("The fairy looks angry. 'Theif! Leave my cave at once and don't come back until you have the passowrd!'");
         }
-        public void Winner()
+        private void Winner()
         {
             Console.WriteLine("The fairy jumps off the chest as it springs open revealing a pile of glowing treasure.");
             Console.WriteLine("Congraduations! You've found the treasure and won the game!");
-            Console.WriteLine("Would you like to keep playing? y/n");
-            string input = Console.ReadLine();
-            if (input == "y")
-                NewDirection();
-            else if (input == "n")
-            {
-                Console.WriteLine("That's enough adventuring for one day.");
-                Console.WriteLine("Goodbye.");
-                Console.ReadLine();
-            }
-                
+            new EndGame().restart();                
         }
 
     }

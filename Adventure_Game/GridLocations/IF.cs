@@ -1,10 +1,18 @@
 ﻿using System;
 using Adventure_Game.GridLocations;
+using Adventure_Game.Helpers;
 
 namespace Adventure_Game
 {
     class IF
     {
+        private PlayerInfo LocalPlayerInfo;
+        public IF(PlayerInfo playerInfo)
+        {
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public IF() { squareEntered(); }
         public void squareEntered()
         {
             Console.WriteLine("There is a cliff, below you is the sea, to the north you can hear a waterfall.");
@@ -17,7 +25,7 @@ namespace Adventure_Game
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new CliffDeath().squareEnterered();
+                new CliffDeath();
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("IG");
@@ -25,7 +33,7 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
-                new HF().squareEntered();
+                new HF();
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("IE");

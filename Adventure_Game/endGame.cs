@@ -10,12 +10,13 @@ namespace Adventure_Game
     {
         public void restart()
         {
-            Console.WriteLine("Would you like to keep playing? y/n");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine("Would you like to play again? y/n");
             string input = Console.ReadLine();
             if (input == "y")
             {
                 Console.Clear();
-                new HF().squareEntered();
+                new HF();
             }
             else if (input == "n")
             {

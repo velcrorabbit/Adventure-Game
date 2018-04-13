@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Adventure_Game.exe" size="16864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Adventure_Game.exe" size="17888">
       <assemblyIdentity name="Adventure_Game" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vtwqWB85F7wa3cU+CREOtQLSituePEhFX8PmQTRv2b0=</dsig:DigestValue>
+        <dsig:DigestValue>zrMPUoh4Lgr3d16vUyWZKpR8phO6vkEXZ+a0W4roXmI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Adventure_Game.Helpers;
+using System;
 
 namespace Adventure_Game
 {
@@ -6,6 +7,7 @@ namespace Adventure_Game
     {
         public static void Main(string[] args)
         {
+            var player = new PlayerInfo();
             Console.WriteLine("Welcome to Adventure Land, what is your name?");
             string playerName = "";
             playerName = Console.ReadLine();
@@ -16,7 +18,8 @@ namespace Adventure_Game
                 Console.WriteLine("Welcome oh glorious creator!");
             else
                 Console.WriteLine("Welcome, {0}" , playerName);
-            new HF().squareEntered();
+            player.PlayerName = playerName;
+            new HF();
         }
     }
 }

@@ -1,16 +1,20 @@
 ﻿using Adventure_Game.GridLocations;
+using Adventure_Game.Helpers;
 using System;
 
 namespace Adventure_Game
 {
     class HF
     {
-        public void squareEntered()
+        private PlayerInfo LocalPlayerInfo;
+        public HF(PlayerInfo playerInfo)
         {
-            var inventory = new Inventory();
-
-            inventory.HasBook = true;
-            
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public HF() { squareEntered(); }
+        private void squareEntered()
+        {
             Console.WriteLine("You are in a forest, trees stretch in every direction.");
             Console.WriteLine("There is a large oak tree in front of you, do you want to climb? y/n");
             string input = Console.ReadLine();
@@ -26,28 +30,28 @@ namespace Adventure_Game
             if (input == "n")
                 Console.WriteLine("Your mother always warned you of the dangers of trees, you decide to continue on blindly.");
 
-            newDirection(inventory);
+            newDirection();
             
         }
 
 
-        private void newDirection(Inventory inventory)
+        private void newDirection()
         {
             Console.WriteLine("Choose a direction");
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new IF().squareEntered();
+                new IF();
             else if (DirectionsHelper.isNorth(direction))
-                new HG().squareEntered();
+                new HG();
             else if (DirectionsHelper.isWest(direction))
-                new GF().squareEntered();
+                new GF();
             else if (DirectionsHelper.isSouth(direction))
-                new HE().squareEntered();
+                new HE();
             else
             {
                 new Error().displayErrorMessage();
-                newDirection(inventory);
+                newDirection();
             }
         }
     }

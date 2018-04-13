@@ -1,10 +1,18 @@
-﻿using System;
+﻿using Adventure_Game.Helpers;
+using System;
 
 namespace Adventure_Game
 {
     internal class FE
     {
-        internal void SquareEntered()
+        private PlayerInfo LocalPlayerInfo;
+        public FE(PlayerInfo playerInfo)
+        {
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public FE() { squareEntered(); }
+        private void squareEntered()
         {
             Console.WriteLine("Infront of you is the entrance to a dark cave, do you want to go in? y/n");
             string input = Console.ReadLine();
@@ -12,7 +20,7 @@ namespace Adventure_Game
             if (input == "y")
             {
                 Console.WriteLine("You bravely walk into the gloom.");
-                new EE().squareEntered();
+                new EE();
             }
             else if (input == "n")
             {
@@ -22,13 +30,13 @@ namespace Adventure_Game
             else
                 new Error().displayErrorMessage();
         }
-        internal void NewDirection()
+        private void NewDirection()
         {
                 string direction = Console.ReadLine();
                 if (DirectionsHelper.isEast(direction)) 
-                    new GE().squareEntered();
+                    new GE();
                 else if (DirectionsHelper.isNorth(direction))
-                    new FF().squareEntered();
+                    new FF();
                 else if (DirectionsHelper.isSouth(direction))
                 {
                     Console.WriteLine("FD");

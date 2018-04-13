@@ -1,15 +1,22 @@
-﻿using System;
+﻿using Adventure_Game.Helpers;
+using System;
 
 namespace Adventure_Game
 {
     internal class House
     {
-
-        public void squareEnterered()
+        private PlayerInfo LocalPlayerInfo;
+        public House(PlayerInfo playerInfo)
+        {
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public House() { squareEntered(); }
+        private void squareEntered()
         {
             Console.WriteLine("You enter the house, it looks very empty except for a note on the table.");
             Console.WriteLine("Do you want to read it? y/n");
-            string input = Console.ReadLine();
+            string input = Console.ReadLine().ToLower();
 
             if (input == "y")
             {
@@ -20,15 +27,16 @@ namespace Adventure_Game
                     "\n     If I am dead, please return my things to my family." +
                     "\n                 'ADEBLEC'");
                 Console.WriteLine("You leave the house with your new information.");
+               
             }
             else if (input == "n")
             {
                 Console.WriteLine("If only you had learned to read.");
                 Console.WriteLine("You leave the house.");
             }
-
-
-
+            else
+                new Error();
+            new HE();
         }
     }
 }

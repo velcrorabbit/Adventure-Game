@@ -1,11 +1,19 @@
 ﻿using System;
 using Adventure_Game.GridLocations;
+using Adventure_Game.Helpers;
 
 namespace Adventure_Game
 {
     class GF
     {
-        public void squareEntered()
+        private PlayerInfo LocalPlayerInfo;
+        public GF(PlayerInfo playerInfo)
+        {
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public GF() { squareEntered(); }
+        private void squareEntered()
         {
             Console.WriteLine("The trees continue, you see a crudely painted wooden sign nailed to one, it reads: ");
             Console.WriteLine("LARGE ANGRY BEAR, DO NOT CONTINUE");
@@ -13,12 +21,12 @@ namespace Adventure_Game
             NewDirection();
         }
 
-         internal void NewDirection()
+         private void NewDirection()
         {
             string direction = Console.ReadLine().ToLower();
 
             if (DirectionsHelper.isEast(direction))
-                new HF().squareEntered();
+                new HF();
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("GG");
@@ -26,9 +34,9 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
-                new FF().squareEntered();
+                new FF();
             else if (DirectionsHelper.isSouth(direction))
-                new GE().squareEntered();
+                new GE();
             else
                 new Error().displayErrorMessage();
         }

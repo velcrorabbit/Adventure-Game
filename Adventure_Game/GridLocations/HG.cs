@@ -1,17 +1,25 @@
 ﻿using Adventure_Game.GridLocations;
+using Adventure_Game.Helpers;
 using System;
 
 namespace Adventure_Game
 {
     internal class HG
     {
-        public void squareEntered()
+        private PlayerInfo LocalPlayerInfo;
+        public HG(PlayerInfo playerInfo)
+        {
+            LocalPlayerInfo = playerInfo;
+            squareEntered();
+        }
+        public HG() { squareEntered(); }
+        private void squareEntered()
         {
             Console.WriteLine("A large river flows in front of you, it looks very deep.");
             NewDirection();
         }
 
-        internal void NewDirection()
+        private void NewDirection()
         {
             Console.WriteLine("Where do you want to go?");
             string direction = Console.ReadLine().ToLower();
@@ -23,11 +31,11 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.isNorth(direction))
-                new RiverDeath().squareEntered();
+                new RiverDeath();
             else if (DirectionsHelper.isWest(direction))
-                new FF().squareEntered();
+                new FF();
             else if (DirectionsHelper.isSouth(direction))
-                new GE().squareEntered();
+                new GE();
             else
                 new Error().displayErrorMessage();
         }

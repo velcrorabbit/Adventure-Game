@@ -8,6 +8,7 @@ namespace Adventure_Game
 
         internal void squareEnterered()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("With a mournfull look to the forest behind you, " +
                             "you decide death is preferable to playing this god awfull game. " +
                             "You jump into the void and die.");

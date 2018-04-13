@@ -87,7 +87,7 @@
     <Compile Include="GridLocations\HH.cs" />
     <Compile Include="GridLocations\House.cs" />
     <Compile Include="GridLocations\IF.cs" />
-    <Compile Include="GridLocations\Inventory.cs" />
+    <Compile Include="Helpers\PlayerInfo.cs" />
     <Compile Include="GridLocations\PitDeath.cs" />
     <Compile Include="GridLocations\RiverDeath.cs" />
     <Compile Include="Helpers\DirectionsHelper.cs" />
