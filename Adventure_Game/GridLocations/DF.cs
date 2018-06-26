@@ -37,9 +37,15 @@ namespace Adventure_Game.GridLocations
             if (DirectionsHelper.isEast(direction))
                 new PitDeath();
             else if (DirectionsHelper.isNorth(direction))
+            {
                 Console.WriteLine("You bump into the cave wall");
+                NewDirection();
+            }
             else if (DirectionsHelper.isWest(direction))
+            {
                 Console.WriteLine("You bump into the cave wall");
+                NewDirection();
+            }
             else if (DirectionsHelper.isSouth(direction))
                 new DE();
             else
@@ -56,17 +62,17 @@ namespace Adventure_Game.GridLocations
                 Winner();
             else
                 NoPassword();
-
         }
         private void NoPassword()
         {
             Console.WriteLine("The fairy looks angry. 'Theif! Leave my cave at once and don't come back until you have the passowrd!'");
+            NewDirection();
         }
         private void Winner()
         {
             Console.WriteLine("The fairy jumps off the chest as it springs open revealing a pile of glowing treasure.");
             Console.WriteLine("Congraduations! You've found the treasure and won the game!");
-            new EndGame().restart();                
+            new EndGame().Restart();                
         }
 
     }

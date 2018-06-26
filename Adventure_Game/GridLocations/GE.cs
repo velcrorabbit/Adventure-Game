@@ -16,6 +16,7 @@ namespace Adventure_Game
 
             Console.WriteLine("The forest continues. Choose a direction");
             newDirection();
+            
         }
 
         private void newDirection()

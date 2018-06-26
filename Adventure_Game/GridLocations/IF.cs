@@ -25,7 +25,7 @@ namespace Adventure_Game
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new CliffDeath();
+                new CliffDeath().squareEntered();
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("IG");

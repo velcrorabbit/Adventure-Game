@@ -21,7 +21,7 @@ namespace Adventure_Game.GridLocations
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("You trip an fall into a dark pit.");
-            new EndGame().restart();
+            new EndGame().Restart();
         }
     }
 }

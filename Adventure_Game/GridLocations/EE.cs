@@ -20,10 +20,10 @@ namespace Adventure_Game
         private void squareEntered()
         {
             Console.WriteLine("The cave continues.");
-            newDirection();
+            NewDirection();
         }
 
-        private void newDirection()
+        private void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
@@ -34,11 +34,14 @@ namespace Adventure_Game
             else if (DirectionsHelper.isWest(direction))
                 new DE();
             else if (DirectionsHelper.isSouth(direction))
-                Console.WriteLine("You bump into the cave wall.");
+            {
+                Console.WriteLine("You bump into the cave wall");
+                NewDirection();
+            }
             else
             {
                 new Error().displayErrorMessage();
-                newDirection();
+                NewDirection();
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Adventure_Game
 {
     internal class EndGame
     {
-        public void restart()
+        public void Restart()
         {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("Would you like to play again? y/n");
@@ -23,6 +23,7 @@ namespace Adventure_Game
                 Console.WriteLine("That's enough adventuring for one day.");
                 Console.WriteLine("Goodbye.");
                 Console.ReadLine();
+                Environment.Exit(0);
             }
         }
     }

@@ -30,6 +30,8 @@ namespace Adventure_Game
             if (input == "n")
                 Console.WriteLine("Your mother always warned you of the dangers of trees, you decide to continue on blindly.");
 
+            if (input == "fin")
+                new EndGame().Restart();
             newDirection();
             
         }
