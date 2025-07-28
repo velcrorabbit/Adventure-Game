@@ -25,7 +25,7 @@ namespace Adventure_Game
             if (input == "y")
             {
                 Console.WriteLine("You bravely walk into the gloom.");
-                new EE();
+                new EE(LocalPlayerInfo);
             }
             else if (input == "n")
             {
@@ -40,9 +40,9 @@ namespace Adventure_Game
         {
             string direction = Console.ReadLine();
             if (DirectionsHelper.isEast(direction)) 
-                new GE();
+                new GE(LocalPlayerInfo);
             else if (DirectionsHelper.isNorth(direction))
-                new FF();
+                new FF(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("FD");

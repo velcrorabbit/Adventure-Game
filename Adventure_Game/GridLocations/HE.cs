@@ -22,7 +22,7 @@ namespace Adventure_Game
             string input = Console.ReadLine();
 
             if (input == "y")
-                new House();
+                new House(LocalPlayerInfo);
             else if (input == "n")
             {
                 Console.WriteLine("Good choice, probably a trap anyway.");
@@ -41,7 +41,7 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.isNorth(direction))
-                new HF();
+                new HF(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("HD");
@@ -50,7 +50,7 @@ namespace Adventure_Game
 
             }
             else if (DirectionsHelper.isWest(direction))
-                new GE();
+                new GE(LocalPlayerInfo);
             else
                 new Error().displayErrorMessage();
         }

@@ -11,12 +11,12 @@ namespace Adventure_Game
         public FF(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
 
-        public FF() { squareEntered(); }
+        public FF() { SquareEntered(); }
 
-        private void squareEntered()
+        private void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.ForegroundColor = ConsoleColor.Red;

@@ -35,7 +35,7 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
-                new HF();
+                new HF(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("IE");

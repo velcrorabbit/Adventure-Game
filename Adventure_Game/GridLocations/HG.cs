@@ -37,9 +37,9 @@ namespace Adventure_Game
             else if (DirectionsHelper.isNorth(direction))
                 new RiverDeath();
             else if (DirectionsHelper.isWest(direction))
-                new FF();
+                new FF(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
-                new GE();
+                new GE(LocalPlayerInfo);
             else
                 new Error().displayErrorMessage();
         }

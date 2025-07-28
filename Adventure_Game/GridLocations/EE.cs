@@ -28,11 +28,11 @@ namespace Adventure_Game
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
             if (DirectionsHelper.isEast(direction))
-                new FE();
+                new FE(LocalPlayerInfo);
             else if (DirectionsHelper.isNorth(direction))
-                new PitDeath();
+                new PitDeath(LocalPlayerInfo);
             else if (DirectionsHelper.isWest(direction))
-                new DE();
+                new DE(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("You bump into the cave wall");

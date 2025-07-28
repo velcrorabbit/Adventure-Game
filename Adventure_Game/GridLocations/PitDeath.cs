@@ -12,11 +12,11 @@ namespace Adventure_Game.GridLocations
         public PitDeath(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public PitDeath() { squareEntered(); }
+        public PitDeath() { SquareEntered(); }
 
-        private void squareEntered()
+        private void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.ForegroundColor = ConsoleColor.Red;

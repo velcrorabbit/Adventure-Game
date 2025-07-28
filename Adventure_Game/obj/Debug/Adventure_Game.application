@@ -4,17 +4,17 @@
   <description asmv2:publisher="Adventure_Game" asmv2:product="Adventure_Game" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Adventure_Game.exe.manifest" size="3494">
+    <dependentAssembly dependencyType="install" codebase="Adventure_Game.exe.manifest" size="3492">
       <assemblyIdentity name="Adventure_Game.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hSsU5Q/Zn1otTZQWyW4sHpdu23cAoc6xnBJMihoBECs=</dsig:DigestValue>
+        <dsig:DigestValue>kIGPXF8psSyoNn8Opdu8unOdZA0UbjBYTEuD7Jd1Gtg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

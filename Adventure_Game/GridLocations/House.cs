@@ -40,7 +40,7 @@ namespace Adventure_Game
             }
             else
                 new Error();
-            new HE();
+            new HE(LocalPlayerInfo);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Adventure_Game.GridLocations
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new PitDeath();
+                new PitDeath(LocalPlayerInfo);
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("You bump into the cave wall");
@@ -53,7 +53,7 @@ namespace Adventure_Game.GridLocations
                 NewDirection();
             }
             else if (DirectionsHelper.isSouth(direction))
-                new DE();
+                new DE(LocalPlayerInfo);
             else
             {
                 new Error().displayErrorMessage();

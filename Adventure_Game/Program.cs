@@ -14,7 +14,7 @@ namespace Adventure_Game
 
             Console.WriteLine("Welcome, {0}" , playerName);
             player.PlayerName = playerName;
-            new HF();
+            new HF(player);
         }
     }
 }

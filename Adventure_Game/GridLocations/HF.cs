@@ -10,10 +10,10 @@ namespace Adventure_Game
         public HF(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public HF() { squareEntered(); }
-        private void squareEntered()
+        public HF() { SquareEntered(); }
+        private void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
 
@@ -47,13 +47,13 @@ namespace Adventure_Game
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new IF();
+                new IF(LocalPlayerInfo);
             else if (DirectionsHelper.isNorth(direction))
-                new HG();
+                new HG(LocalPlayerInfo);
             else if (DirectionsHelper.isWest(direction))
-                new GF();
+                new GF(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
-                new HE();
+                new HE(LocalPlayerInfo);
             else
             {
                 new Error().displayErrorMessage();

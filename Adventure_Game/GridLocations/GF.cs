@@ -29,7 +29,7 @@ namespace Adventure_Game
             string direction = Console.ReadLine().ToLower();
 
             if (DirectionsHelper.isEast(direction))
-                new HF();
+                new HF(LocalPlayerInfo);
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("GG");
@@ -37,9 +37,9 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
-                new FF();
+                new FF(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
-                new GE();
+                new GE(LocalPlayerInfo);
             else
                 new Error().displayErrorMessage();
         }

@@ -10,12 +10,12 @@ namespace Adventure_Game
         public GE(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
 
-        public GE() { squareEntered(); }
+        public GE() { SquareEntered(); }
 
-        private void squareEntered() { 
+        private void SquareEntered() { 
 
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("The forest continues. Choose a direction");
@@ -29,11 +29,11 @@ namespace Adventure_Game
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new HE();
+                new HE(LocalPlayerInfo);
             else if (DirectionsHelper.isNorth(direction))
-                new GF();
+                new GF(LocalPlayerInfo);
             else if (DirectionsHelper.isWest(direction))
-                new FE();
+                new FE(LocalPlayerInfo);
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("GD");
