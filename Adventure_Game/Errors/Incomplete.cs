@@ -1,19 +1,21 @@
 ﻿using Adventure_Game;
+using Adventure_Game.Helpers;
 using System;
 
 namespace Adventure_Game
 {
     class Incomplete
     {
-        public void displayIncompleteMessage()
+
+        public void DisplayIncompleteMessage(PlayerInfo LocalPlayerInfo)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("You fall into a dark empty void, you notice a sign in the sky 'New map! Coming soon to an adventure near you'.");
             Console.WriteLine("");
-            new EndGame().Restart();
+            new EndGame(LocalPlayerInfo).Restart();
         }
 
-        public void displayIncompleteMessageWithoutExit()
+        public void DisplayIncompleteMessageWithoutExit()
         {
             Console.WriteLine("You hit an invisable wall, a sign above reads: 'New map! Coming soon to an adventure near you'.");
         }

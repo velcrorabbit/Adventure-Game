@@ -33,7 +33,7 @@ namespace Adventure_Game
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("GG");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))

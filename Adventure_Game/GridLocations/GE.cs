@@ -37,7 +37,7 @@ namespace Adventure_Game
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("GD");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 newDirection();
             }
             else

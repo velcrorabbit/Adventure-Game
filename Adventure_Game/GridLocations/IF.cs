@@ -27,11 +27,11 @@ namespace Adventure_Game
             string direction = Console.ReadLine();
 
             if (DirectionsHelper.isEast(direction))
-                new CliffDeath().squareEntered();
+                new CliffDeath(LocalPlayerInfo).squareEntered();
             else if (DirectionsHelper.isNorth(direction))
             {
                 Console.WriteLine("IG");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
             else if (DirectionsHelper.isWest(direction))
@@ -39,7 +39,7 @@ namespace Adventure_Game
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("IE");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
             else

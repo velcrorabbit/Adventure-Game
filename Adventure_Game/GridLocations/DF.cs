@@ -87,7 +87,7 @@ namespace Adventure_Game.GridLocations
         {
             Console.WriteLine("The fairy jumps off the chest as it springs open revealing a pile of glowing treasure.");
             Console.WriteLine("Congraduations! You've found the treasure and won the game!");
-            new EndGame().Restart();                
+            new EndGame(LocalPlayerInfo).Restart();                
         }
 
     }

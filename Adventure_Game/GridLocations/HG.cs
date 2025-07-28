@@ -31,7 +31,7 @@ namespace Adventure_Game
             if (DirectionsHelper.isEast(direction))
             {
                 Console.WriteLine("IG");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
             else if (DirectionsHelper.isNorth(direction))

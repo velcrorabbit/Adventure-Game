@@ -37,7 +37,7 @@ namespace Adventure_Game
             if (DirectionsHelper.isEast(direction))
             {
                 Console.WriteLine("IE");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
             else if (DirectionsHelper.isNorth(direction))
@@ -45,7 +45,7 @@ namespace Adventure_Game
             else if (DirectionsHelper.isSouth(direction))
             {
                 Console.WriteLine("HD");
-                new Incomplete().displayIncompleteMessageWithoutExit();
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
 
             }
