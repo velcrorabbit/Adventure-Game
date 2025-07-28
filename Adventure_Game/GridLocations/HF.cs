@@ -6,13 +6,14 @@ namespace Adventure_Game
 {
     class HF
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
+
         public HF(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
             SquareEntered();
         }
-        public HF() { SquareEntered(); }
+
         private void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
@@ -37,11 +38,10 @@ namespace Adventure_Game
             if (input == "fin")
                 new EndGame(LocalPlayerInfo).Restart();
 
-            newDirection();
+            NewDirection();
         }
 
-
-        private void newDirection()
+        private void NewDirection()
         {
             Console.WriteLine("Choose a direction");
             string direction = Console.ReadLine();
@@ -57,7 +57,7 @@ namespace Adventure_Game
             else
             {
                 new Error().displayErrorMessage();
-                newDirection();
+                NewDirection();
             }
         }
     }

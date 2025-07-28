@@ -14,8 +14,6 @@ namespace Adventure_Game
             SquareEntered();
         }
 
-        public FF() { SquareEntered(); }
-
         private void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;

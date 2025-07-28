@@ -14,7 +14,6 @@ namespace Adventure_Game.GridLocations
             LocalPlayerInfo = playerInfo;
             SquareEntered();
         }
-        public PitDeath() { SquareEntered(); }
 
         private void SquareEntered()
         {

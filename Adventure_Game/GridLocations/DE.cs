@@ -6,15 +6,13 @@ namespace Adventure_Game.GridLocations
 {
     class DE
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
 
         public DE(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
             squareEntered();
         }
-
-        public DE() { squareEntered(); }
 
         private void squareEntered()
         {

@@ -5,7 +5,7 @@ namespace Adventure_Game
 {
     internal class GE
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
 
         public GE(PlayerInfo playerInfo)
         {
@@ -13,17 +13,15 @@ namespace Adventure_Game
             SquareEntered();
         }
 
-        public GE() { SquareEntered(); }
-
         private void SquareEntered() { 
 
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("The forest continues. Choose a direction");
-            newDirection();
+            NewDirection();
             
         }
 
-        private void newDirection()
+        private void NewDirection()
         {
            
             string direction = Console.ReadLine();
@@ -38,11 +36,11 @@ namespace Adventure_Game
             {
                 Console.WriteLine("GD");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();
-                newDirection();
+                NewDirection();
             }
             else
                 new Error().displayErrorMessage();
-                newDirection();
+                NewDirection();
 
         }
     }

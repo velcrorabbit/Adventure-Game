@@ -14,8 +14,6 @@ namespace Adventure_Game.GridLocations
             SquareEntered();
         }
 
-        public RiverDeath() { SquareEntered(); }
-
         private void SquareEntered()
         {
             Console.ForegroundColor = ConsoleColor.Red;

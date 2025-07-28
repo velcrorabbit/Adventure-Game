@@ -13,8 +13,6 @@ namespace Adventure_Game
             SquareEntered();
         }
 
-        public House() { SquareEntered(); }
-
         private void SquareEntered()
         {
             Console.WriteLine("You enter the house, it looks very empty except for a note on the table.");

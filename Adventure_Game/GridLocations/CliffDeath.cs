@@ -11,10 +11,10 @@ namespace Adventure_Game
         public CliffDeath(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
 
-        internal void squareEntered()
+        internal void SquareEntered()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("With a mournfull look to the forest behind you, " +

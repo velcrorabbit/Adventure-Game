@@ -14,8 +14,6 @@ namespace Adventure_Game.GridLocations
             SquareEntered();
         }
 
-        public DF() { SquareEntered(); }
-
         private void SquareEntered()
         {
             Console.WriteLine("A large chest stands in front of you, there is a bored looking fairy sitting on it.");

@@ -15,8 +15,6 @@ namespace Adventure_Game.GridLocations
             SquareEntered();
         }
 
-        public HH() { SquareEntered(); }
-
         private void SquareEntered()
         {
             throw new NotImplementedException();
