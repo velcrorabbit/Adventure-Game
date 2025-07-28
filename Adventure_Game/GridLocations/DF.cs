@@ -61,7 +61,7 @@ namespace Adventure_Game.GridLocations
 
         private void HasPassword()
         {
-            Console.WriteLine("The fairy looks doubltfull. But you carefully say the password");
+            Console.WriteLine("The fairy looks doubtfull. But you carefully say the password");
             Winner();
         }
 
@@ -77,7 +77,7 @@ namespace Adventure_Game.GridLocations
 
         private void NoPassword()
         {
-            Console.WriteLine("The fairy looks angry. 'Theif! Leave my cave at once and don't come back until you have the passowrd!'");
+            Console.WriteLine("The fairy looks angry. 'Thief! Leave my cave at once and don't come back until you have the password!'");
             NewDirection();
         }
 
