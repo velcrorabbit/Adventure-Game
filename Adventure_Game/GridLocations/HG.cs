@@ -33,7 +33,7 @@ namespace Adventure_Game
                 NewDirection();
             }
             else if (DirectionsHelper.IsNorth(direction))
-                new RiverDeath();
+                new RiverDeath(LocalPlayerInfo);
             else if (DirectionsHelper.IsWest(direction))
                 new FF(LocalPlayerInfo);
             else if (DirectionsHelper.IsSouth(direction))

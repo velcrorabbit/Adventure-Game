@@ -24,7 +24,7 @@ namespace Adventure_Game
             if (input == "y")
             {
                 Console.Clear();
-                new HF();
+                new HF(LocalPlayerInfo);
             }
             else if (input == "n")
             {
