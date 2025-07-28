@@ -1,23 +1,25 @@
 ﻿using Adventure_Game.Helpers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Adventure_Game.GridLocations
 {
     class DE
     {
         private PlayerInfo LocalPlayerInfo;
+
         public DE(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
             squareEntered();
         }
+
         public DE() { squareEntered(); }
+
         private void squareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
+
             Console.WriteLine("The cave continues.");
             newDirection();
         }

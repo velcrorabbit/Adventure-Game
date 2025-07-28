@@ -15,9 +15,13 @@ namespace Adventure_Game
         public HF() { squareEntered(); }
         private void squareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
+
             Console.WriteLine("You are in a forest, trees stretch in every direction.");
             Console.WriteLine("There is a large oak tree in front of you, do you want to climb? y/n");
+
             string input = Console.ReadLine();
+
             if (input == "y")
             {
                 Console.WriteLine("You cimb to the top of the tree, you can see:");
@@ -31,9 +35,9 @@ namespace Adventure_Game
                 Console.WriteLine("Your mother always warned you of the dangers of trees, you decide to continue on blindly.");
 
             if (input == "fin")
-                new EndGame().Restart();
+                new EndGame(LocalPlayerInfo).Restart();
+
             newDirection();
-            
         }
 
 

@@ -20,6 +20,7 @@
             return false;
 
         }
+
         public static bool isSouth(string direction)
         {
             if (direction.ToLower().Equals("south") || direction.ToLower().Equals("s"))
@@ -29,6 +30,7 @@
             return false;
 
         }
+
         public static bool isNorth(string direction)
         {
             if (direction.ToLower().Equals("north") || direction.ToLower().Equals("n"))

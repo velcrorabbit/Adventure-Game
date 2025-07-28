@@ -5,14 +5,17 @@ namespace Adventure_Game
 {
     internal class House
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
+
         public House(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public House() { squareEntered(); }
-        private void squareEntered()
+
+        public House() { SquareEntered(); }
+
+        private void SquareEntered()
         {
             Console.WriteLine("You enter the house, it looks very empty except for a note on the table.");
             Console.WriteLine("Do you want to read it? y/n");
@@ -27,7 +30,8 @@ namespace Adventure_Game
                     "\n     If I am dead, please return my things to my family." +
                     "\n                 'ADEBLEC'");
                 Console.WriteLine("You leave the house with your new information.");
-               
+                LocalPlayerInfo.HasPassword = true;
+
             }
             else if (input == "n")
             {

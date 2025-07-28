@@ -6,14 +6,18 @@ namespace Adventure_Game
     internal class GE
     {
         private PlayerInfo LocalPlayerInfo;
+
         public GE(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
             squareEntered();
         }
+
         public GE() { squareEntered(); }
+
         private void squareEntered() { 
 
+            LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("The forest continues. Choose a direction");
             newDirection();
             

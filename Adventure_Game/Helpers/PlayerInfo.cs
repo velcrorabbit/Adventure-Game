@@ -8,5 +8,8 @@
 
         public bool HasLadder { get; set; }
 
+        public bool HasPassword { get; set; }
+
+        public int TilesEntered { get; set; }
     }
 }

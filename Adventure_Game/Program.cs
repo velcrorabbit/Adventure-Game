@@ -12,12 +12,7 @@ namespace Adventure_Game
             string playerName = "";
             playerName = Console.ReadLine();
 
-            if (playerName == "Mark")
-                Console.WriteLine("This game requires a level of literacy that you do not posses,\n please give the computer to an adult.");
-            else if (playerName == "Rachel")
-                Console.WriteLine("Welcome oh glorious creator!");
-            else
-                Console.WriteLine("Welcome, {0}" , playerName);
+            Console.WriteLine("Welcome, {0}" , playerName);
             player.PlayerName = playerName;
             new HF();
         }

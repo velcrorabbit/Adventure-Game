@@ -1,20 +1,23 @@
 ﻿using System;
-using Adventure_Game.GridLocations;
 using Adventure_Game.Helpers;
 
 namespace Adventure_Game
 {
     class HE
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
+
         public HE(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public HE() { squareEntered(); }
-        private void squareEntered()
+
+        public HE() { SquareEntered(); }
+
+        private void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("You come across a small cottage, the door is open and no one seems to be home, do you want to go in? y/n");
             string input = Console.ReadLine();
 

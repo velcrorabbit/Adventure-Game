@@ -6,15 +6,19 @@ namespace Adventure_Game
 {
     internal class HG
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
+
         public HG(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public HG() { squareEntered(); }
-        private void squareEntered()
+
+        public HG() { SquareEntered(); }
+
+        private void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("A large river flows in front of you, it looks very deep.");
             NewDirection();
         }

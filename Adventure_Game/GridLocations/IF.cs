@@ -1,19 +1,21 @@
 ﻿using System;
-using Adventure_Game.GridLocations;
 using Adventure_Game.Helpers;
 
 namespace Adventure_Game
 {
     class IF
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
+
         public IF(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public IF() { squareEntered(); }
-        public void squareEntered()
+
+        public IF() { SquareEntered(); }
+
+        public void SquareEntered()
         {
             Console.WriteLine("There is a cliff, below you is the sea, to the north you can hear a waterfall.");
             NewDirection();

@@ -20,9 +20,7 @@ namespace Adventure_Game.GridLocations
         private void squareEntered()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Sadly you never learned to swim, " +
-                "and as the water closes \n over your head you think " +
-                "back to all the places you still haven't been.");
+            Console.WriteLine("Sadly you never learned to swim, and as the water closes \n over your head you think back to all the places you still haven't been.");
             new EndGame().Restart();
         }
     }

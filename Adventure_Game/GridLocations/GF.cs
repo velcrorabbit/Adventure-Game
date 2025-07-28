@@ -1,20 +1,23 @@
 ﻿using System;
-using Adventure_Game.GridLocations;
 using Adventure_Game.Helpers;
 
 namespace Adventure_Game
 {
     class GF
     {
-        private PlayerInfo LocalPlayerInfo;
+        private readonly PlayerInfo LocalPlayerInfo;
+
         public GF(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
-        public GF() { squareEntered(); }
-        private void squareEntered()
+
+        public GF() { SquareEntered(); }
+
+        private void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("The trees continue, you see a crudely painted wooden sign nailed to one, it reads: ");
             Console.WriteLine("LARGE ANGRY BEAR, DO NOT CONTINUE");
             Console.WriteLine("Where do you want to go?");
