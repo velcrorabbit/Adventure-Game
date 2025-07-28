@@ -26,11 +26,11 @@ namespace Adventure_Game
             if (input == "y")
             {
                 Console.WriteLine("You cimb to the top of the tree, you can see:");
-                Console.WriteLine("a river to the North,");
-                Console.WriteLine("a cliff to the East,");
-                Console.WriteLine("more forest to the West,");
-                Console.WriteLine("a house to the south.");
-                Console.WriteLine("you climb down feeling more confident in where you want to go.");
+                Console.WriteLine("- A river to the North,");
+                Console.WriteLine("- A cliff to the East,");
+                Console.WriteLine("- More forest to the West,");
+                Console.WriteLine("- A house to the south.");
+                Console.WriteLine("You climb down feeling more confident in where you want to go.");
             }
             if (input == "n")
                 Console.WriteLine("Your mother always warned you of the dangers of trees, you decide to continue on blindly.");

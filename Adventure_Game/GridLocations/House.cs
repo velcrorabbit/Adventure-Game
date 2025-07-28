@@ -28,6 +28,9 @@ namespace Adventure_Game
                     "\n     If I am dead, please return my things to my family." +
                     "\n                 'ADEBLEC'");
                 Console.WriteLine("You leave the house with your new information.");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Gained Password");
+                Console.ForegroundColor = ConsoleColor.Gray;
                 LocalPlayerInfo.HasPassword = true;
 
             }
