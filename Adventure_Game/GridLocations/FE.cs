@@ -37,11 +37,11 @@ namespace Adventure_Game
         private void NewDirection()
         {
             string direction = Console.ReadLine();
-            if (DirectionsHelper.isEast(direction)) 
+            if (DirectionsHelper.IsEast(direction)) 
                 new GE(LocalPlayerInfo);
-            else if (DirectionsHelper.isNorth(direction))
+            else if (DirectionsHelper.IsNorth(direction))
                 new FF(LocalPlayerInfo);
-            else if (DirectionsHelper.isSouth(direction))
+            else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("FD");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();

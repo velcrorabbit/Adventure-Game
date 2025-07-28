@@ -26,16 +26,16 @@ namespace Adventure_Game.GridLocations
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
-            if (DirectionsHelper.isEast(direction))
+            if (DirectionsHelper.IsEast(direction))
                 new EE(LocalPlayerInfo);
-            else if (DirectionsHelper.isNorth(direction))
+            else if (DirectionsHelper.IsNorth(direction))
                 new DF(LocalPlayerInfo);
-            else if (DirectionsHelper.isWest(direction))
+            else if (DirectionsHelper.IsWest(direction))
             {
                 Console.WriteLine("You bump into the cave wall");
                 newDirection();
             }
-            else if (DirectionsHelper.isSouth(direction))
+            else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("You bump into the cave wall");
                 newDirection();

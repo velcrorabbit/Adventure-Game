@@ -26,17 +26,17 @@ namespace Adventure_Game
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
 
-            if (DirectionsHelper.isEast(direction))
+            if (DirectionsHelper.IsEast(direction))
                 new CliffDeath(LocalPlayerInfo).SquareEntered();
-            else if (DirectionsHelper.isNorth(direction))
+            else if (DirectionsHelper.IsNorth(direction))
             {
                 Console.WriteLine("IG");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
-            else if (DirectionsHelper.isWest(direction))
+            else if (DirectionsHelper.IsWest(direction))
                 new HF(LocalPlayerInfo);
-            else if (DirectionsHelper.isSouth(direction))
+            else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("IE");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();

@@ -26,13 +26,13 @@ namespace Adventure_Game
            
             string direction = Console.ReadLine();
 
-            if (DirectionsHelper.isEast(direction))
+            if (DirectionsHelper.IsEast(direction))
                 new HE(LocalPlayerInfo);
-            else if (DirectionsHelper.isNorth(direction))
+            else if (DirectionsHelper.IsNorth(direction))
                 new GF(LocalPlayerInfo);
-            else if (DirectionsHelper.isWest(direction))
+            else if (DirectionsHelper.IsWest(direction))
                 new FE(LocalPlayerInfo);
-            else if (DirectionsHelper.isSouth(direction))
+            else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("GD");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();

@@ -26,17 +26,17 @@ namespace Adventure_Game
         {
             string direction = Console.ReadLine().ToLower();
 
-            if (DirectionsHelper.isEast(direction))
+            if (DirectionsHelper.IsEast(direction))
                 new HF(LocalPlayerInfo);
-            else if (DirectionsHelper.isNorth(direction))
+            else if (DirectionsHelper.IsNorth(direction))
             {
                 Console.WriteLine("GG");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
-            else if (DirectionsHelper.isWest(direction))
+            else if (DirectionsHelper.IsWest(direction))
                 new FF(LocalPlayerInfo);
-            else if (DirectionsHelper.isSouth(direction))
+            else if (DirectionsHelper.IsSouth(direction))
                 new GE(LocalPlayerInfo);
             else
                 new Error().displayErrorMessage();

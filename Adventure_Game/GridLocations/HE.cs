@@ -32,22 +32,22 @@ namespace Adventure_Game
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
-            if (DirectionsHelper.isEast(direction))
+            if (DirectionsHelper.IsEast(direction))
             {
                 Console.WriteLine("IE");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
             }
-            else if (DirectionsHelper.isNorth(direction))
+            else if (DirectionsHelper.IsNorth(direction))
                 new HF(LocalPlayerInfo);
-            else if (DirectionsHelper.isSouth(direction))
+            else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("HD");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
 
             }
-            else if (DirectionsHelper.isWest(direction))
+            else if (DirectionsHelper.IsWest(direction))
                 new GE(LocalPlayerInfo);
             else
                 new Error().displayErrorMessage();
