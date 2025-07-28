@@ -16,6 +16,7 @@ namespace Adventure_Game.GridLocations
 
         private void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Sadly you never learned to swim, and as the water closes \n over your head you think back to all the places you still haven't been.");
             new EndGame(LocalPlayerInfo).Restart();

@@ -15,6 +15,8 @@ namespace Adventure_Game
 
         private void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
+
             Console.WriteLine("You enter the house, it looks very empty except for a note on the table.");
             Console.WriteLine("Do you want to read it? y/n");
             string input = Console.ReadLine().ToLower();

@@ -16,6 +16,7 @@ namespace Adventure_Game.GridLocations
 
         private void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("A large chest stands in front of you, there is a bored looking fairy sitting on it.");
             Console.WriteLine("She turns to you, 'Please tell me you have the password' she says.");
             Console.WriteLine("Do you have the password? y/n");

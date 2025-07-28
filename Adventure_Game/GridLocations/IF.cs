@@ -13,10 +13,9 @@ namespace Adventure_Game
             SquareEntered();
         }
 
-        public IF() { SquareEntered(); }
-
         public void SquareEntered()
         {
+            LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("There is a cliff, below you is the sea, to the north you can hear a waterfall.");
             NewDirection();
         }
