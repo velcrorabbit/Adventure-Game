@@ -15,9 +15,13 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             throw new NotImplementedException();
+        }
+
+        public void NewDirection()
+        {
         }
     }
 }

@@ -3,9 +3,9 @@ using AdventureGame.Helpers;
 using System;
 
 
-namespace AdventureGame.GridLocations
+namespace AdventureGame.GridLocations.Deaths
 {
-    class PitDeath
+    internal class PitDeath
     {
         private readonly PlayerInfo LocalPlayerInfo;
 

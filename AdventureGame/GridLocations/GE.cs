@@ -1,6 +1,7 @@
 ﻿using AdventureGame.Helpers;
 using AdventureGame.Interfaces;
 using System;
+using System.Security.AccessControl;
 
 namespace AdventureGame.GridLocations
 {
@@ -14,7 +15,7 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered() { 
+        public void SquareEntered() { 
 
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("The forest continues. Choose a direction");
@@ -22,7 +23,7 @@ namespace AdventureGame.GridLocations
             
         }
 
-        private void NewDirection()
+        public void NewDirection()
         {
            
             string direction = Console.ReadLine();
@@ -34,11 +35,7 @@ namespace AdventureGame.GridLocations
             else if (DirectionsHelper.IsWest(direction))
                 new FE(LocalPlayerInfo);
             else if (DirectionsHelper.IsSouth(direction))
-            {
-                Console.WriteLine("GD");
-                new Incomplete().DisplayIncompleteMessageWithoutExit();
-                NewDirection();
-            }
+                new GD(LocalPlayerInfo);
             else
                 new Error().displayErrorMessage();
                 NewDirection();

@@ -22,7 +22,7 @@ namespace AdventureGame.GridLocations
             NewDirection();
         }
 
-        internal void NewDirection()
+        public void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();

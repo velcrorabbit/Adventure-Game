@@ -15,7 +15,7 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("You come across a small cottage, the door is open and no one seems to be home, do you want to go in? y/n");
@@ -30,7 +30,7 @@ namespace AdventureGame.GridLocations
             }
         }
 
-        private void NewDirection()
+        public void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();

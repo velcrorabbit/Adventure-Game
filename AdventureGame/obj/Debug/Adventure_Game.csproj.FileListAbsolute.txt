@@ -23,3 +23,13 @@ C:\Users\rache\source\repos\Adventure-Game\Adventure_Game\obj\Debug\Adventure_Ga
 C:\Users\rache\source\repos\Adventure-Game\Adventure_Game\obj\Debug\Adventure_Game.application
 C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\Adventure_Game.csproj.AssemblyReference.cache
 C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\Adventure_Game.csproj.CoreCompileInputs.cache
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\bin\Debug\AdventureGame.exe.config
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\bin\Debug\AdventureGame.exe.manifest
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\bin\Debug\AdventureGame.application
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\bin\Debug\AdventureGame.exe
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\bin\Debug\AdventureGame.pdb
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\AdventureGame.exe.manifest
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\AdventureGame.application
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\AdventureGame.exe
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\AdventureGame.pdb
+C:\Users\rache\source\repos\Adventure-Game\AdventureGame\obj\Debug\AdventureGame.exe.config

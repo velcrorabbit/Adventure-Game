@@ -14,7 +14,7 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("The trees continue, you see a crudely painted wooden sign nailed to one, it reads: ");
@@ -23,7 +23,7 @@ namespace AdventureGame.GridLocations
             NewDirection();
         }
 
-         private void NewDirection()
+        public void NewDirection()
         {
             string direction = Console.ReadLine().ToLower();
 

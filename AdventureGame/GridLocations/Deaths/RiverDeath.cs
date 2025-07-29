@@ -2,9 +2,9 @@
 using AdventureGame.Helpers;
 using System;
 
-namespace AdventureGame.GridLocations
+namespace AdventureGame.GridLocations.Deaths
 {
-    class RiverDeath
+    internal class RiverDeath
     {
         private readonly PlayerInfo LocalPlayerInfo;
 

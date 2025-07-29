@@ -15,14 +15,14 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("A large river flows in front of you, it looks very deep.");
             NewDirection();
         }
 
-        private void NewDirection()
+        public void NewDirection()
         {
             Console.WriteLine("Where do you want to go?");
             string direction = Console.ReadLine().ToLower();

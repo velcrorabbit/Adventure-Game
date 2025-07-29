@@ -14,7 +14,7 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
 
@@ -22,7 +22,7 @@ namespace AdventureGame.GridLocations
             NewDirection();
         }
 
-        private void NewDirection()
+        public void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();

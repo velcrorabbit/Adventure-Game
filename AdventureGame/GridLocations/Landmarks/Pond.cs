@@ -1,7 +1,7 @@
 ﻿using AdventureGame.Helpers;
 using System;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations.Landmarks
 {
     internal class Pond
     {
@@ -23,7 +23,7 @@ namespace AdventureGame
 
             if (input == "y")
             {
-                Console.WriteLine("The water becomes too deep to walk, you flail your arms and legs and somehow propel yourself down to the object, it's a sword! Pick it up?");
+                Console.WriteLine("The water becomes too deep to walk, you flail your arms and legs and somehow propel yourself down to the object, it's a sword! Pick it up? y/n");
                 input = Console.ReadLine().ToLower();
 
                 if (input == "y")

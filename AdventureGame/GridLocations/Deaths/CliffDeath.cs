@@ -2,7 +2,7 @@
 using AdventureGame.Helpers;
 using System;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations.Deaths
 {
     internal class CliffDeath
     {

@@ -14,7 +14,7 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
 
@@ -35,7 +35,7 @@ namespace AdventureGame.GridLocations
                 new Error().displayErrorMessage();
         }
 
-        private void NewDirection()
+        public void NewDirection()
         {
             string direction = Console.ReadLine();
             if (DirectionsHelper.IsEast(direction)) 

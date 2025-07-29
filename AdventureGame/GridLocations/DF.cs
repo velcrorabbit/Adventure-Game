@@ -1,5 +1,6 @@
 ﻿using AdventureGame.Helpers;
 using AdventureGame.Interfaces;
+using AdventureGame.GridLocations.Deaths;
 using System;
 
 namespace AdventureGame.GridLocations
@@ -14,7 +15,7 @@ namespace AdventureGame.GridLocations
             SquareEntered();
         }
 
-        private void SquareEntered()
+        public void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.WriteLine("A large chest stands in front of you, there is a bored looking fairy sitting on it.");
@@ -33,7 +34,7 @@ namespace AdventureGame.GridLocations
                 new Error().displayErrorMessage();
         }
 
-        private void NewDirection()
+        public void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
 

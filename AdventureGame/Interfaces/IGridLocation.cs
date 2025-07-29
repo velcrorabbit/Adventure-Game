@@ -6,10 +6,8 @@ namespace AdventureGame.Interfaces
 {
     interface IGridLocation
     {
-        private readonly PlayerInfo LocalPlayerInfo;
+       void SquareEntered();
 
-        private void SquareEntered()
-
-        private void NewDirection()
+       void NewDirection();
     }
 }

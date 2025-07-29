@@ -1,7 +1,7 @@
 ﻿using AdventureGame.Helpers;
 using System;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations.Landmarks
 {
     internal class House
     {

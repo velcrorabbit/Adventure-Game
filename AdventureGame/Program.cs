@@ -1,4 +1,5 @@
 ﻿using AdventureGame.Helpers;
+using AdventureGame.GridLocations;
 using System;
 
 namespace AdventureGame
