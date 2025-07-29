@@ -1,10 +1,10 @@
-﻿using Adventure_Game;
-using Adventure_Game.Helpers;
+﻿using AdventureGame;
+using AdventureGame.Helpers;
 using System;
 
-namespace Adventure_Game
+namespace AdventureGame
 {
-    class FF
+    class FF : IGridLocation
     {
         private PlayerInfo LocalPlayerInfo;
 

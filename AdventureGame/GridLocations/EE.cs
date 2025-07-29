@@ -1,49 +1,45 @@
-﻿using Adventure_Game.Helpers;
+﻿using AdventureGame.GridLocations;
+using AdventureGame.Helpers;
 using System;
 
-
-namespace Adventure_Game.GridLocations
+namespace AdventureGame
 {
-    class DE
+    class EE : IGridLocation
     {
         private readonly PlayerInfo LocalPlayerInfo;
 
-        public DE(PlayerInfo playerInfo)
+        public EE(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
-            squareEntered();
+            SquareEntered();
         }
 
-        private void squareEntered()
+        private void SquareEntered()
         {
             LocalPlayerInfo.TilesEntered += 1;
-
             Console.WriteLine("The cave continues.");
-            newDirection();
+            NewDirection();
         }
 
-        private void newDirection()
+        private void NewDirection()
         {
             Console.WriteLine("Choose a direction.");
             string direction = Console.ReadLine();
             if (DirectionsHelper.IsEast(direction))
-                new EE(LocalPlayerInfo);
+                new FE(LocalPlayerInfo);
             else if (DirectionsHelper.IsNorth(direction))
-                new DF(LocalPlayerInfo);
+                new PitDeath(LocalPlayerInfo);
             else if (DirectionsHelper.IsWest(direction))
-            {
-                Console.WriteLine("You bump into the cave wall");
-                newDirection();
-            }
+                new DE(LocalPlayerInfo);
             else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("You bump into the cave wall");
-                newDirection();
+                NewDirection();
             }
             else
             {
                 new Error().displayErrorMessage();
-                newDirection();
+                NewDirection();
             }
         }
     }

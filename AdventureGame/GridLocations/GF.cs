@@ -1,9 +1,9 @@
 ﻿using System;
-using Adventure_Game.Helpers;
+using AdventureGame.Helpers;
 
-namespace Adventure_Game
+namespace AdventureGame
 {
-    class GF
+    class GF : IGridLocation
     {
         private readonly PlayerInfo LocalPlayerInfo;
 

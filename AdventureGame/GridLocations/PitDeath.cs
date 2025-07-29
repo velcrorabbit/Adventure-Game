@@ -1,14 +1,15 @@
-﻿using Adventure_Game;
-using Adventure_Game.Helpers;
+﻿using AdventureGame;
+using AdventureGame.Helpers;
 using System;
 
-namespace Adventure_Game.GridLocations
+
+namespace AdventureGame.GridLocations
 {
-    class RiverDeath
+    class PitDeath
     {
         private readonly PlayerInfo LocalPlayerInfo;
 
-        public RiverDeath(PlayerInfo playerInfo)
+        public PitDeath(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
             SquareEntered();
@@ -18,7 +19,7 @@ namespace Adventure_Game.GridLocations
         {
             LocalPlayerInfo.TilesEntered += 1;
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Sadly you never learned to swim, and as the water closes \n over your head you think back to all the places you still haven't been.");
+            Console.WriteLine("You trip an fall into a dark pit.");
             new EndGame(LocalPlayerInfo).Restart();
         }
     }

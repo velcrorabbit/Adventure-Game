@@ -1,9 +1,9 @@
-﻿using Adventure_Game.Helpers;
+﻿using AdventureGame.Helpers;
 using System;
 
-namespace Adventure_Game
+namespace AdventureGame
 {
-    internal class FE
+    class FE : IGridLocation
     {
         private readonly PlayerInfo LocalPlayerInfo;
 

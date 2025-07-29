@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{27E3DD4B-16DD-49E8-AF55-9A4FDAA73A9F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Adventure_Game</RootNamespace>
-    <AssemblyName>Adventure_Game</AssemblyName>
+    <RootNamespace>AdventureGame</RootNamespace>
+    <AssemblyName>AdventureGame</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,7 @@
     <ManifestCertificateThumbprint>DEF669147D68D21DC8265FAAB1DF20B751004FD6</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Adventure_Game_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>AdventureGame_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -99,7 +99,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Adventure_Game_TemporaryKey.pfx" />
+    <None Include="AdventureGame_TemporaryKey.pfx" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>

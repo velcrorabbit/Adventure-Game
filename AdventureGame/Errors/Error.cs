@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Adventure_Game
+namespace AdventureGame
 {
     class Error
     {

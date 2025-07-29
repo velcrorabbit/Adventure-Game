@@ -1,4 +1,4 @@
-﻿namespace Adventure_Game
+﻿namespace AdventureGame
 {
     static class DirectionsHelper
     {
