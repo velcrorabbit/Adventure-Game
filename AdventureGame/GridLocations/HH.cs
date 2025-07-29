@@ -1,10 +1,10 @@
 ﻿using AdventureGame.Helpers;
+using AdventureGame.Interfaces;
 using System;
 
 
 namespace AdventureGame.GridLocations
 {
-
     class HH : IGridLocation
     {
         private readonly PlayerInfo LocalPlayerInfo;

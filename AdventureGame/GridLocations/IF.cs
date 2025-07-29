@@ -1,7 +1,9 @@
 ﻿using System;
 using AdventureGame.Helpers;
+using AdventureGame.Interfaces;
+using AdventureGame.GridLocations.Deaths;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations
 {
     class IF : IGridLocation
     {

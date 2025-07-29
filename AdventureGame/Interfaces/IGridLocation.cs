@@ -2,7 +2,7 @@
 using System;
 
 
-namespace AdventureGame.GridLocations
+namespace AdventureGame.Interfaces
 {
     interface IGridLocation
     {

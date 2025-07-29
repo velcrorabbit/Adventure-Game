@@ -1,8 +1,8 @@
-﻿using AdventureGame.GridLocations;
-using AdventureGame.Helpers;
+﻿using AdventureGame.Helpers;
+using AdventureGame.Interfaces;
 using System;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations
 {
     class EE : IGridLocation
     {

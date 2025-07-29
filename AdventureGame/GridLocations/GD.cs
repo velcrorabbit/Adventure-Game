@@ -1,58 +1,60 @@
-﻿using System;
-using AdventureGame.Helpers;
-using AdventureGame.Interfaces;
-using AdventureGame.GridLocations.Landmarks;
+﻿using AdventureGame.Helpers;
+using System;
 
 namespace AdventureGame.GridLocations
 {
-    class HE : IGridLocation
+    class GD : IGridLocation
     {
         private readonly PlayerInfo LocalPlayerInfo;
 
-        public HE(PlayerInfo playerInfo)
+        public GD(PlayerInfo playerInfo)
         {
             LocalPlayerInfo = playerInfo;
             SquareEntered();
         }
 
-        private void SquareEntered()
-        {
+        private void SquareEntered() {
             LocalPlayerInfo.TilesEntered += 1;
-            Console.WriteLine("You come across a small cottage, the door is open and no one seems to be home, do you want to go in? y/n");
+            Console.WriteLine("A large pond sits in a clearing, the sun shining on the water. Something glints under the water in the middle. Enter the pond? y/n");
             string input = Console.ReadLine();
 
             if (input == "y")
-                new House(LocalPlayerInfo);
+                new Pond(LocalPlayerInfo);
             else if (input == "n")
             {
-                Console.WriteLine("Good choice, probably a trap anyway.");
+                Console.WriteLine("The water looks deep, and you never learned to swim, better not risk it.");
                 NewDirection();
             }
         }
 
         private void NewDirection()
         {
-            Console.WriteLine("Choose a direction.");
+           
             string direction = Console.ReadLine();
+
             if (DirectionsHelper.IsEast(direction))
-            {
-                Console.WriteLine("IE");
-                new Incomplete().DisplayIncompleteMessageWithoutExit();
-                NewDirection();
-            }
-            else if (DirectionsHelper.IsNorth(direction))
-                new HF(LocalPlayerInfo);
-            else if (DirectionsHelper.IsSouth(direction))
             {
                 Console.WriteLine("HD");
                 new Incomplete().DisplayIncompleteMessageWithoutExit();
                 NewDirection();
-
             }
-            else if (DirectionsHelper.IsWest(direction))
+            else if (DirectionsHelper.IsNorth(direction))
                 new GE(LocalPlayerInfo);
+            else if (DirectionsHelper.IsWest(direction))
+            {
+                Console.WriteLine("FD");
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
+                NewDirection();
+            }
+            else if (DirectionsHelper.IsSouth(direction))
+            {
+                Console.WriteLine("GC");
+                new Incomplete().DisplayIncompleteMessageWithoutExit();
+                NewDirection();
+            }
             else
                 new Error().displayErrorMessage();
+                NewDirection();
         }
     }
 }

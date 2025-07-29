@@ -1,8 +1,8 @@
-﻿using AdventureGame.GridLocations;
+﻿using AdventureGame.Interfaces;
 using AdventureGame.Helpers;
 using System;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations
 {
     class HF : IGridLocation
     {

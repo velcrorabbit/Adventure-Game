@@ -1,6 +1,6 @@
 ﻿using AdventureGame.Helpers;
+using AdventureGame.Interfaces;
 using System;
-
 
 namespace AdventureGame.GridLocations
 {

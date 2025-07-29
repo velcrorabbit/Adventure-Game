@@ -1,8 +1,9 @@
-﻿using AdventureGame.GridLocations;
+﻿using AdventureGame.GridLocations.Deaths;
+using AdventureGame.Interfaces;
 using AdventureGame.Helpers;
 using System;
 
-namespace AdventureGame
+namespace AdventureGame.GridLocations
 {
     class HG : IGridLocation
     {
